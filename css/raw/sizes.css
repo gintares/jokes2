@@ -1,0 +1,47 @@
+
+header,section.cntm,section.content,footer { margin: 0 0.4vw 24px 0.4vw; border: 0;  padding : 0; }
+
+@media only screen and (max-device-width : 340px) {
+   * { font-size : 24px; }
+    div { font-size : 15px; }
+    h2  { font-size : 20px; }
+    h1  { font-size : 24px; }
+}
+
+@media only screen and (min-device-width : 341px) and (max-device-width : 670px) {
+   * { font-size : 18px; }
+   div { font-size : 15px; }
+   h2  { font-size : 18px; }
+   h1  { font-size : 20px; }
+}
+
+@media only screen and (min-device-width : 761px)  {
+   * { font-size : 20px;  }
+   h2  { font-size : 22px; }
+   h1  { font-size : 24px; }
+}
+
+@media only screen and (max-device-width : 539px)  {
+    body { width : 100vw; overflow: visible; }  
+    div.back { display : block; }
+    .item {
+        width : 95vw; 
+    }
+}
+
+@media only screen and (min-device-width : 540px)  and (max-device-width : 739px)  {
+body { width : 100vw; overflow: visible; /* Hide scrollbars, means does not work on mobile */ }
+    div.back { display : block; }
+    .item {
+        width : 46vw; 
+    }
+}
+
+@media only screen and (min-device-width : 740px)  {
+    body { width : 100vw; overflow: visible; /* Hide scrollbars, means does not work on mobile */ }
+    div.back { display : none; }  
+    .item {
+        width : 22vw; 
+    }
+}
+

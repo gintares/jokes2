@@ -1,0 +1,13 @@
+jg_keyA : ['id', 'type', 'joke', 'punch']
+#final joke library keys
+cash_keys : ['type', 'joke', 'punch'] 
+#//to make search faster, i cash keys such as type
+#to further improove the spee,d all cashed strings shall be the same length, ie - padded with zeroes
+
+#map to different apis, and the paths to apis 
+api:
+    1: 
+        api_pth: __DIR__/index.json
+        api_A_keyMap: 
+            joke: 'setup'
+            punch: 'punchline' 

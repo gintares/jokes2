@@ -1,0 +1,24 @@
+js:
+    limn: 20
+    int_tms: 200
+    sumId: "jokes-summary"
+    contId: "jokes-container"
+    qs: form
+    evt_els_qs:
+        n: 'input[name="n"]' 
+        keyw: 'input[name="keyw"]' 
+        
+    titles: 
+        id: 'joke id'
+        keyw: 'joke search string' 
+        n: 'number of jokes'
+        punch: 'punchline' 
+        joke: 'joke'
+        type: 'joke type' 
+
+
+#limn - jokes number limit
+#int_tms - time to collect user input before executing jke search
+#qs. evt_els_qs - query selectors of elements to be used
+#titles - api keys titles to be displayed for the user
+

@@ -1,0 +1,26 @@
+the first  version contained several bugs:
+
+
+********************************************
+ajax_call.php 
+
+WRONG:      
+           for( $i-0; $i<$n; $i++ ) {}
+
+CORRECT:
+            $i=0; 
+            while ($i<$n) {
+               $ind = rand(0, $apiL) ;
+               $id = $apiKA[$ind] ;     
+               //echo '<br> ind='.$ind.'  id='.$id.'  i='.$i; 
+               $resp['data'][$id] = $api[$id]; 
+               $i=count($resp['data']);     
+            } // for ( $i=0; $i<$n; $i++
+
+The reason is that the same joke sometimes is fetched twice, thus despite increment increases, the number of jokes remains the same. 
+
+
+********************************************
+The task requires to limit number of jokes to 20. 
+There was no limit initially. 
+

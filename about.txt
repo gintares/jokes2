@@ -1,0 +1,56 @@
+By: Gintare Statkute
+
+***************************  USAGE
+
+depending on how url is formed, there maybe needed modification in */jokes_any/js/raw/fs.js
+
+    //this.resp={};
+    var currentURL = window.location.href; 
+    var urlA = currentURL.split('/'); 
+    urlA.pop(); //remove part correspondong to action
+    this.base_url = urlA.join('/');
+    //console.log('base_url=');  console.log(this.base_url);
+    this.ajax_url = this.base_url +'/ajax_call.php'; //amend the ajax action
+
+comment out the above and add the correct url:
+this.ajax_url = CORRECT_SERVER_PATH_TO_FILE + '/ajax_call.php'; 
+
+
+***************************  DURATION
+
+to write back-end took 30min,
+
+to write front-end-js : took half a day, since i have lost recently part of my code, most javascript, and have no prepared function to deal with the user input.  
+
+to write front-end-css : a day, since I was developing back-end the last years, and have no any style tools or templates installed or prepared, like node, npm, gulp,...
+
+***************************  DESCRIPTION
+
+production: index.php
+development index_raw.php and the folder  - must be writable
+
+cnfg_api.yml contains php-configuration how to merge apis, not used in production
+cnfg_js.yml contains js-configuration, like title names, ids of fields to display the answer, the query-strings(qs) of form and elements for user inputs, used in production
+
+index.php was created from index_raw.php using gulp tasks
+
+init_api.php is not used in production
+init_api.php  initialises project api ($jg) from given apis using conf.yml
+the folder 'jokes_GS' - must be writable
+uncomment init_api.php output lines, to merge more apis:
+n)file_put_contents( __DIR__.'/jokes_api_task.json', json_encode($jg,true) );
+n)$succ = file_put_contents( __DIR__.'/jokes_'.$ck.'_map.json', json_encode(${'jg_'.$ck.'_map'}, true) ); 
+
+init_run.php is used in production, initialises js 
+
+js and css are minimised and cleaned using gulp.
+
+raw main javascript is in  'jokes_GS/js/main/main.js'
+user input is analysed in '/jokes_GS/js/fs.js', '/jokes_GS/js/ajax_call_urlenc.js'
+ajax request is posted to 'ajax_call.php'
+
+
+raw css is in  'jokes_GS/css/raw/flex.css'
+
+
+

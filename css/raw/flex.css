@@ -1,0 +1,145 @@
+ * { 
+    margin: 0; padding: 0; border : 0; 
+    font-family: "Georgia", serif;
+    box-sizing: border-box;
+    text-align : justify;
+} 
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image:  url( img/border5.jpeg);
+  background-size: 100vw auto; 
+  background-repeat: repeat-y;;
+  /* background-size: cover;
+  background-size: 100vw 100vh; */
+}
+
+header {
+  /* background-color: #F1F1F1; */
+  text-align: center;
+  padding: 5px;
+}
+
+.content  {
+    width : 100vw;
+}
+
+input {
+    left:20vw; 
+    margin-bottom:10px;
+    border: solid 2px #8b5d1f;
+    border-width: 2px;
+    transition: width 5s;
+}
+
+input:hover {
+	border-width: 10px;
+}
+
+
+h1 {
+     left:20vw; 
+  margin-top: 40px;
+  margin-bottom: 10px;
+  /*background-color: #fcfbe0; */
+     /* in order: x offset, y offset, blur size, spread size, color */
+ /* box-shadow: 1px -20px 10px 1px #fcfbe0; */
+}
+
+h2 {
+     left:20vw; 
+    margin:20px 20px 20px 20px;
+  /*background-color: #fcfbe0; */
+  box-shadow: 20px 10px 10px -1px #fcfbe0;
+}
+
+label {
+  left:25vw; 
+  /* background-color: #e6b800; #e6b800, #ffdb4d, #ffd700,  #fff100, */
+   /*background-image: radial-gradient(  #fff888, #fcfbe0, #ffffff ); */
+  background-color: #fcfbe0; 
+  box-shadow: -10px -10px 10px 1px #fdfbe0;  /* #fff9a3 ; */
+    /* box-shadow: 120px 80px 40px 20px #0ff; */
+  color: #182b27;
+  /* border-radius: 5px, 50px, 30px, 2px;
+  padding: 5px; */
+  margin-bottom:10px;
+}
+
+    body { width : 100vw;  }  /* overflow: hidden; Hide scrollbars, means does not work on mobile  */
+    header { width: 95vw; top:1vw; left:10vw;  padding: 1vw 2vw 0 2vw; }
+    footer { width: 95vw; height: 2vh; bottom:1vw; left:10vw; padding: 0 2vw 2vw 2vw; }
+    .bd { 
+        width: 99vw; top:0; left:0; padding : 0.5vw;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start; /* flex-start | flex-end | center | space-between | space-around | space-evenly | start | end | left | right ... + safe | unsafe; */
+        align-items: flex-start; /*  stretch | flex-start | flex-end | center | baseline | first baseline | last baseline | start | end | self-start | self-end + ... safe | unsafe;  */
+        align-content: flex-start; /* flex-start | flex-end | center | space-between | space-around | space-evenly | stretch | start | end | baseline | first baseline | last baseline + ... safe | unsafe; */
+        padding: 0 2vw 0 2vw;
+    }
+
+.cont {
+    display: flex;
+    flex-direction: row; /* row | row-reverse | column | column-reverse; */
+    flex-wrap: wrap; /* nowrap | wrap | wrap-reverse; */
+    justify-content: left; /* flex-start | flex-end | center | space-between | space-around | space-evenly | start | end | left | right ... + safe | unsafe; */
+    align-items: baseline; /*stretch | flex-start | flex-end | center | baseline | first baseline | last baseline | start | end | self-start | self-end + ... safe | unsafe; */
+    align-content: space-around; /* flex-start | flex-end | center | space-between | space-around | space-evenly | stretch | start | end | baseline | first baseline | last baseline + ... safe | unsafe; */
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.item {
+  /* background-color: #f1f1f1; */
+  background-image: url( img/center5.png) no-repeat;
+  background-size: cover;
+  color:  #000;
+    border-left: solid 2px #fffcf7;
+    border-radius: 6px;
+    transition: width 5s;
+/* https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_border-image2
+    https://css-tricks.com/almanac/properties/b/border-image/
+*/
+    /*
+  border-width: 30px;
+  border-style: solid;
+  border-image: url( img/border5.jpeg);
+  border-image-slice: 10px;
+  border-image-width: 5px;
+  / *border-image-outset: 1;* /
+  border-image-repeat: repeat;
+  border-radius: 5px, 10px, 30px, 2px;
+  padding: 5px; */
+}
+div.item:hover {
+	border-left-width: 10px;
+}
+
+/* https://css-tricks.com/how-nth-child-works/ */
+.line {
+    padding: 5px;
+    border-radius: 10px;
+    /* background-color:#f6fabe ; */
+    /*box-shadow: 20px -10px 10px -1px #f6fabe; */
+    color : #252616 ; 
+}
+.line:nth-child(5n-4) {
+ /*background-color: #f1f1f1;*/
+    box-shadow: -5px -10px 10px -1px #f1f1f1;
+  color: #17291b;
+} 
+ /* in order: x offset, y offset, blur size, spread size, color */
+.line:nth-child(6n-1) {
+  /*background-color: #f2dbff- violet, #ffdb4d, #ffd700,   #fff888, #fcfbe0,*/
+    box-shadow: 20px 10px 10px 1px #fcfbe0;
+  color: #3c234a;
+} 
+
+
+.disp_none {
+    display : none; 
+}
